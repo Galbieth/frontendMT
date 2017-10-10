@@ -1,0 +1,42 @@
+  <div class="box-moeda">
+  <h3> Conversor Reais - Dólar </h3>
+  <input type="text" onchange="converterParaDolar()">
+  <p></p>
+
+  <div class="box-KK">
+
+  <h3> Conversor KK - Real </h3>
+  <input type="text" onchange="converterParaDolar()">
+  <p></p>
+</div>
+</div>
+
+  <script type="text/javascript">
+  const valorDolar = 0.31602;
+  const valorKK = 0.3
+
+  const input = document.querySelector('.box-moeda input');
+  const p = document.querySelector('.box-moeda p');
+  const input = document.querySelector('.box-KK input');
+  const input = document.querySelector('.box-KK p');
+
+
+  const converterParaDolar = (reais) => {
+    return reais*valorDolar;
+  };
+
+  const converterParaKK = (reais) => {
+    return reais*valorKK;
+  };
+
+  input.addEventListener('keyup', (event) =>{
+    console.log(event.target);
+    p.innerHTML = converterParaDolar (event.target.value);
+  });
+
+  input.addEventListener ('keyup', (event) =>{
+    console.log(event.target);
+    p.innerHTML = converterParaKK (event.target.value);
+  })
+
+  </script>
